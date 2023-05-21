@@ -1,15 +1,17 @@
 on: pull_request
 
 jobs:
-  example_comment_pr:
+  comment_pr:
+    permissions: write-all
     runs-on: ubuntu-latest
     name: An example job to comment a PR
     steps:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Comment PR
+      - name: Comment
         uses: thollander/actions-comment-pull-request@v2
         with:
-          message:|
-             hello chandu
+          message: |
+            please watch this very important video
+            https://www.youtube.com/watch?v=xDCQgmSbiHo
